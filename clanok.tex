@@ -1,0 +1,128 @@
+% Metódy inžinierskej práce
+
+Here is the translation of the document from Slovak to English:
+
+```latex
+\documentclass[10pt,twoside,english,a4paper]{article}
+
+\usepackage[english]{babel}
+%\usepackage[T1]{fontenc}
+\usepackage[IL2]{fontenc} % better typesetting for the letter Ľ than in T1
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{url} % the \url command for formatting URLs
+\usepackage{hyperref} % the links in the text will be active (for some document classes, this may cause text shift)
+
+\usepackage{cite}
+%\usepackage{times}
+
+\pagestyle{headings}
+
+\title{Title\thanks{Semester project in the course Engineering Methods, academic year 2015/16, supervision: Firstname Lastname}} % name and surname of the instructor in the exercises
+
+\author{Firstname Lastname\\[2pt]
+	{\small Slovak University of Technology in Bratislava}\\
+	{\small Faculty of Informatics and Information Technologies}\\
+	{\small \texttt{...@stuba.sk}}
+	}
+
+\date{\small 30 September 2015} % adjust
+
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\ldots
+\end{abstract}
+
+
+
+\section{Introduction}
+
+Motivate the reader and explain what you are writing about. The introduction is usually not divided into sections.
+
+Explicitly mention the structure of the article. Here is an example.
+The basic problem hinted at in the introduction is explained in more detail in Section~\ref{some}.
+Important context is provided in Sections~\ref{important} and~\ref{more_important}.
+Final remarks are provided in Section~\ref{conclusion}.
+
+
+
+\section{Some Section} \label{some}
+
+Everything is clear from Fig.~\ref{f:decision}.
+
+\begin{figure*}[tbh]
+\centering
+%\includegraphics[scale=1.0]{diagram.pdf}
+Even text can be presented as a figure. It becomes a labeled floating object. After creating a diagram, remove the \texttt{\%} symbol in front of the \verb|\includegraphics| command and mark this line as a comment (also using the \texttt{\%} symbol).
+\caption{The decisive argument.}
+\label{f:decision}
+\end{figure*}
+
+
+
+\section{Another Section} \label{another}
+
+The basic problem is therefore\ldots{} First, let's look at some explanation (Section~\ref{another:some}), and then at some more explanation (Section~\ref{another:more}).\footnote{Sometimes you may need a footnote.}
+
+It may seem that the problem does not actually exist\cite{Coplien:MPD}, but it has been proven otherwise~\cite{Czarnecki:Staged, Czarnecki:Progress}. Nevertheless, even today, we encounter all kinds of dubious opinions on the web\cite{PLP-Framework}. Important things can be \emph{emphasized in italics}.
+
+
+\subsection{Some Explanation} \label{another:some}
+
+Sometimes, a list needs to be provided:
+
+\begin{itemize}
+\item one thing
+\item another thing
+	\begin{itemize}
+	\item x
+	\item y
+	\end{itemize}
+\end{itemize}
+
+The same list, but numbered:
+
+\begin{enumerate}
+\item one thing
+\item another thing
+	\begin{enumerate}
+	\item x
+	\item y
+	\end{enumerate}
+\end{enumerate}
+
+
+\subsection{More Explanation} \label{another:more}
+
+\paragraph{A very important note.}
+Sometimes a heading is needed to mark a paragraph. The text continues right after the heading.
+
+
+
+\section{Important Section} \label{important}
+
+
+
+
+\section{Even More Important Section} \label{more_important}
+
+
+
+
+\section{Conclusion} \label{conclusion} % or another variation of the title
+
+
+
+%\acknowledgement{If you want to thank someone\ldots}
+
+
+% this generates the bibliography list from the contents of the literatura.bib file based on the citations in the article
+\bibliography{literatura}
+\bibliographystyle{plain} % alternatively, alpha, abbrv, or any other style
+\end{document}
+```
